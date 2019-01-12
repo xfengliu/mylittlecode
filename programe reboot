@@ -1,0 +1,12 @@
+@echo off  
+set INTERVAL=600 
+set WWW=10
+:Again  
+echo start server
+taskkill /f /t /im rrshare.exe
+timeout %WWW%
+C:
+cd C:\Program Files (x86)\rrshare
+start rrshare.exe
+timeout %INTERVAL%
+goto Again
